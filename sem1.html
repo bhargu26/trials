@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="icon" href="icon.ico">
+	<title>Academics</title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+<style type="text/css">
+body {
+  color:white;
+  text-decoration-color: darkgray;
+  font-family: 'Hanalei', cursive;
+  background: #ecf0f1;
+  background-image: url("images/manit\ logo.png");
+    background-repeat: no-repeat, repeat;
+}
+h1 {
+  text-align: center;
+}
+.half {
+  float: left;
+  width: 100%;
+  padding: 0 1em;
+}
+/* Acordeon styles */
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  font-family: 'Hanalei', cursive;
+  font-weight: bold;
+  color: black;
+  overflow: hidden;
+}
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tab label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background: crimson;
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+}
+.blue label {
+  background: hotpink;
+}
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: rgb(230, 174, 183);
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+}
+.blue .tab-content {
+  background: hotpink;
+}
+.tab-content p {
+  margin: 1em;
+}
+/* :checked */
+.tab input:checked ~ .tab-content {
+  max-height: 300vh;
+}
+/* Icon */
+.tab label::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+.tab input[type=checkbox] + label::after {
+  content: "+";
+}
+.tab input[type=radio] + label::after {
+  content: "\25BC";
+}
+.tab input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
+}
+.tab input[type=radio]:checked + label::after {
+  transform: rotateX(180deg);
+}
+
+    
+  
+    
+
+
+
+</style>
+</head>
+<body>
+
+<style>
+body {
+  font-family: 'Hanalei', cursive;
+  background-color: darkkhaki;
+}
+
+.sidenav {
+  font-family:"Rakkas";
+  font-color:"black";
+    height: 80%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: url("bgs.jpg");
+    /*background-color: #ddd;*/
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+
+}
+
+.main {
+    background-image: url("bg4.jpg");
+    margin-left: 20px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+    height:200px;
+  /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 2px;}
+    .sidenav a {font-size: 18px;}
+}
+</style>
+
+  
+
+
+<div class = "main">
+
+<div class="wrapper">
+  <h1 style="font-size: 60px"><span>My Academic Info</span></h1>
+  
+  <div class="half">
+    <p style="font-size: 50px"><strong>Courses Took</strong></p>
+    <div class="tab">
+      <input id="tab-one" type="checkbox" name="tabs">
+      <label for="tab-one" style="font-size: 30px">Semester 1</label>
+      <div class="tab-content" style="font-size: 20px">
+        <p><ol>
+        	<li>MTH111 Mathematics1</li>
+        	<li>PHY112 Physics</li>
+            <li>CSE114 Computer Programming and Problem Sloving</li>
+            <li>CE112 Basic Civil Engineering</li>
+<li>HUM113 Communication Skills</li>
+<li>ME 115 Engineering Graphics	</li>
+<li>CSE116 Computer Programming and Problem Sloving Lab</li>
+<li>PHY 117	Physics Lab</li>
+        </ol>
+        </p>
+      </div>
+    </div>
+    
+        
+
+    
+  </div>
+  
+        
+    </div>
+  </div>
+</div>
+<!-- <p>end</p> -->
+</body>
+</html>
