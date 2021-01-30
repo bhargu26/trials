@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="icon" href="icon.ico">
+	<title>Academics</title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+<style type="text/css">
+body {
+  color: #2c3e50;
+  background: #ecf0f1;
+}
+h1 {
+  text-align: center;
+}
+.half {
+  float: left;
+  width: 100%;
+  padding: 0 1em;
+}
+/* Acordeon styles */
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  font-weight: bold;
+  color: #fff;
+  overflow: hidden;
+}
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tab label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background: crimson;
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+}
+.blue label {
+  background: hotpink;
+}
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: rgb(230, 174, 183);
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+}
+.blue .tab-content {
+  background: hotpink;
+}
+.tab-content p {
+  margin: 1em;
+}
+/* :checked */
+.tab input:checked ~ .tab-content {
+  max-height: 300vh;
+}
+/* Icon */
+.tab label::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+.tab input[type=checkbox] + label::after {
+  content: "+";
+}
+.tab input[type=radio] + label::after {
+  content: "\25BC";
+}
+.tab input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
+}
+.tab input[type=radio]:checked + label::after {
+  transform: rotateX(180deg);
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  background-color: crimson;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 22px;
+  font-style: bold;
+}
+
+.item1 {
+font-style:bold;
+font-size: 30px;
+  grid-column-start: 1;
+  grid-column-end: 8;
+}
+
+
+</style>
+</head>
+<body>
+
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  font-family:"Rakkas";
+  font-color:"black";
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: url("bgs.jpg");
+    /*background-color: #ddd;*/
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+
+}
+
+.main {
+    background-image: url("bg4.jpg");
+    margin-left: 20px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+    height:200px;
+  /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 2px;}
+    .sidenav a {font-size: 18px;}
+}
+</style>
+
+  
+
+
+<div class = "main">
+
+<div class="wrapper">
+  <h1 style="font-size: 60px"><span>My Academic Info</span></h1>
+  
+  <div class="half">
+    <p style="font-size: 50px"><strong>Courses Took</strong></p>
+    <div class="tab">
+      <input id="tab-one" type="checkbox" name="tabs">
+      <label for="tab-one" style="font-size: 30px">Semester 1</label>
+      <div class="tab-content" style="font-size: 20px">
+        <p><ol>
+        	<li>MTH111 Mathematics1</li>
+        	<li>PHY112 Physics</li>
+            <li>CSE114 Computer Programming and Problem Sloving</li>
+            <li>CE112 Basic Civil Engineering</li>
+<li>HUM113 Communication Skills</li>
+<li>ME 115 Engineering Graphics	</li>
+<li>CSE116 Computer Programming and Problem Sloving Lab</li>
+<li>PHY 117	Physics Lab</li>
+        </ol>
+        </p>
+      </div>
+    </div>
+    <div class="tab">
+      <input id="tab-two" type="checkbox" name="tabs">
+      <label for="tab-two" style="font-size: 30px">Semester 2</label>
+      <div class="tab-content" style="font-size: 20px">
+        <p><ol>
+<li>MTH121 Mathematics2</li>
+<li>CH122 Engineering Chemistry </li>
+<li>Envirnomental Engineering & Biology</li>
+<li>ME125 Basic Mechanical Engineering</li>
+<li>CE 126 Solid Mechanics	</li>
+<li>PH 108 Basic Electrical & Electronics Engineering & </li>
+<li>ME127 Workshop Practice</li>
+<li>CH 117 Chemistry Lab</li>
+<li>EE126 Electrical & Electronics lab</li>
+      </div>
+    </div>
+    <div class="tab">
+      <input id="tab-three" type="checkbox" name="tabs">
+      <label for="tab-three" style="font-size: 30px">Semester 3</label>
+      <div class="tab-content" style="font-size: 20px">
+     <ol>
+
+        <li>MTH 212 Computational Techniques </li>
+        <li>EC 211 Electronic Devices & Circuits </li>
+        <li>EC 212 Digital Circuits </li>
+<li>EC 213 Network Analysis and Synthesis </li>
+<li> 214 Signals and Systems</li> 
+    <li> 215 Instrumentation and Control </li>
+        <li> 216 Electronic Circuit and Digital Circuits</li>
+
+
+<ol>
+      </div>
+    </div>
+    <div class="tab">
+        <input id="tab-four" type="checkbox" name="tabs">
+        <label for="tab-four" style="font-size: 30px">Semester 4</label>
+        <div class="tab-content" style="font-size: 20px">
+       <ol>
+      
+          <li>EC 221 Linear Integrated Circuits </li>
+          <li>EC 222 Microprocessors and Microcontrollers </li>
+          <li> EC 223 Analog Communication </li>
+          <li>EC 224 Comm. Networks & Transmission Lines </li>
+          <li> EC 225 EM Fields</li>
+          <li>EC 226 Data Structures </li>
+          <li>EC227 Linear Integrated Circuits &
+            Microprocessors and Microcontrollers lab</li>
+          <li>EC 228 Analog Communication & Data Structure  lab</li>
+  
+  
+  <ol>
+        </div>
+      </div>
+      <div class="tab">
+        <input id="tab-five" type="checkbox" name="tabs">
+        <label for="tab-five" style="font-size: 30px">Semester 5</label>
+        <div class="tab-content" style="font-size: 20px">
+       <ol>
+      
+        <li> 1EC 311 Digital Communication</li> 
+        <li> EC 312 Digital Signal Processing </li>
+        <li>EC 313 VLSI Design </li>
+        <li>EC 355 Biometrc Signal Processing</li>
+        <li>EC 336 Design Of Analog Ics</li> 
+        <li>EC 332 Computer Networks </li>
+        
+        
+        <li>EC 314 Digital Comm. & DSP Lab </li>
+        <li>EC 315 CNTL & VLSI Design Lab </li>
+  
+  <ol>
+        </div>
+      </div>
+      
+    <div class="tab">
+      <input id="tab-six" type="checkbox" name="tabs">
+      <label for="tab-six" style="font-size: 30px">Time-table</label>
+      <div class="tab-content" style="font-size: 20px width : 1000px" >
+        
+<div class="grid-container">
+    <div class="item1">6th Sem ECE-TIME TABLE</div>
+    <div class="item6">Day</div>
+    <div class="item7">9:00-10:00</div>
+    <div class="item8">10:15-11:15</div>
+    <div class="item3">11:30-12:30</div>  
+   
+    <div class="item4">1:30-2:30</div>
+    <div class="item4">2:45-3:45</div>
+      <div class="item4">4:00-5:00</div>
+    <div class="item2">MON</div>
+    <div class="item3">EC 322 </div>  
+    <div class="item4">EC 321 </div>
+    <div class="item5">EC 323 </div>
+    <div class="item6"></div>
+    <div class="item10"></div>
+    <div class="item10"></div>
+    <div class="item8">TUE</div> 
+     <div class="item3">EC 322 </div>  
+    <div class="item4">EC 321 </div>
+    <div class="item5">EC 323 </div>
+    <div class="item6">EC 323</div>
+    <div class="item10">EC 323</div>
+    <div class="item10">EC 323</div>
+    
+    <div class="item8">WED</div>
+     <div class="item3">EC 322 </div>  
+    <div class="item4">EC 321 </div>
+    <div class="item5">EC 323 </div>
+    <div class="item6">EC 323</div>
+    <div class="item10">EC 323</div>
+    <div class="item10">EC 323</div>
+    
+    <div class="item8">THU</div>
+     <div class="item3">EC 322 </div>  
+    <div class="item4">EC 321 </div>
+    <div class="item5">EC 323 </div>
+    <div class="item6">EC 323</div>
+    <div class="item10">EC 323</div>
+    <div class="item10">EC 323</div>
+    <div class="item8">FRI</div>
+     <div class="item3">EC 322 </div>  
+    <div class="item4">EC 321 </div>
+    <div class="item5">EC 323 </div>
+    <div class="item6"></div>
+    <div class="item10"></div>
+    <div class="item10"></div>
+    
+    
+  </div>
+  
+        
+    </div>
+  </div>
+</div>
+<!-- <p>end</p> -->
+</body>
+</html>
